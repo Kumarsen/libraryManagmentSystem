@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LMS</title>
+</head>
+<body>
+    <div id="headDiv">
+        <span>YOUR LIBRARY</span>
+        <a class= "btn2" href="login.html">Logout</a>
+        <a class= "hmbtn" href="Index.html">Home</a>
+    </div>
+
+    <div id="dashboardDiv">
+        <center>
+            <div class="addbook_page">
+                <form class="addbook" name="addbookform" method="post" onsubmit="return saveBook()">
+                <h3>Add Book</h3>
+                <input type="text"  name="bookname" placeholder="Enter Book Name">
+                <input type="text" name="author" placeholder="Enter Author Name">
+                <label for="book">Book Available ? Not:</label>
+                <select name="status">
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+                <input type="submit"value="Add">
+                </form>
+
+                <a href="admin_Dashboard.html" class="returnBtn">Return to Dashboard</a>
+            </div>
+         </center>
+    </div>
+
+    <div id="footDiv">
+        allCopyReserved©2021
+    </div>
+    
+    <script type="text/javascript">
+        var book=[];
+      const saveBook=()=>{
+
+        class Book{
+          constructor(name,author,status){
+            this.name=name;
+            this.author=author;
+            this.status=status;
+
+            //console.log(`${name} ${author} ${status}`)
+          }
+        }
+        let name=document.addbookform.bookname.value;
+        let author=document.addbookform.author.value;
+        let status=document.addbookform.status.value;
+
+        if(name.length < 1 || author.length < 1 == null ){
+          alert("Filed should not be empty..")
+          return false;
+        }
+
+       let b=new Book(name,author,status);
+       book.push(b);
+       //console.log(book.length,...book)
+       alert("Saved Successfully.");
+       return false;
+
+      }
+    </script>
+    <link rel="stylesheet" href="Index.css">
+</body>
+</html>

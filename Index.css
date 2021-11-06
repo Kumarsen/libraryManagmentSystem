@@ -1,0 +1,244 @@
+body {
+    background-color: black;
+    color: white;
+}
+#headDiv {
+    height: 64px;
+    border-left: 3px solid rgb(67, 169, 177);
+    border-bottom: 3px solid rgb(67, 169, 177);
+    border-bottom-left-radius: 7px;
+}
+#headDiv span {
+    display: inline-block;
+    text-align: center;
+    font-size: 25px;
+    height: 37px;
+    width: 195px;
+    margin-top: 8px;
+    margin-left: 200px;
+    border-right: 3px solid rgb(67, 169, 177);
+    border-bottom: 3px solid rgb(67, 169, 177);
+    border-bottom-right-radius: 7px;
+}
+.btn2 {
+    float: right;
+    color: white;
+    border-right: 3px solid rgb(67, 169, 177);
+    border-bottom: 3px solid rgb(67, 169, 177);
+    border-bottom-right-radius: 5px;
+    text-decoration: none;
+    margin-top: 19px;
+    margin-right: 200px;
+}
+.hmbtn {
+    float: right;
+    color: white;
+    border-right: 2.5px solid rgb(67, 169, 177);
+    border-bottom: 2.5px solid rgb(67, 169, 177);
+    border-bottom-right-radius: 5px;
+    text-decoration: none;
+    margin-top: 20px;
+    margin-right: 47px;
+}
+#homeContainerDiv, #dashboardDiv, #loginDiv {
+    position: relative;
+    height: 690px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#homeContainerDiv {
+   
+    background-image: url("Images/homeBg.jpg");
+}
+.hmbtn:hover, .btn2:hover {
+    color: rgb(255, 174, 0);
+    font-weight: bold;
+}
+#info a {
+    background-color: transparent;
+    border:3px solid goldenrod;
+    border-radius: 5px;
+    color:white;
+    text-decoration: none;
+    display: inline-block;
+    height: 34px;
+    width: 95px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 25px;
+}
+#info a:hover {
+    color:black;
+    background-color:rgb(255, 174, 0) ;
+}
+#info {
+    position: absolute;
+    left: 200px;
+    top: 200px;
+}
+#info span {
+    font-size: 40px;
+}
+
+#loginDiv {
+    background-image: url("Images/loginBg.jfif");
+}
+#dashboardDiv {
+    background-image: url("Images/baseImage.jpg");
+}
+.dashContainer {
+    position: relative;
+    top: 100px;
+    left: 270px;
+    height: 500px;
+    width: 960px;
+    overflow:hidden;
+}
+
+.dashHead {
+    position: sticky;
+    top: 0px;
+    left: 377px;
+    border-left: 3px solid rgb(67, 169, 177);
+    border-bottom: 3px solid rgb(67, 169, 177);
+    border-bottom-right-radius: 6px;
+    border-bottom-left-radius: 6px;
+    height: 32px;
+    width: 205px;
+    background-color: black;
+    opacity: 0.6;
+}
+.dashText {
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 381px;
+    font-size: 25px;
+    text-align: center;
+    color: white;
+}
+.funContainer {
+    position: absolute;
+    height: 145px;
+    width: 200px;
+    border: 3px solid rgb(67, 169, 177);
+    border-radius: 50px;
+    opacity: 0.6;
+    background-color:black;
+}
+.addbookTab {
+    left: 108px;
+    top: 115px;
+}
+.addTabText,  .removeTabText, .issueTabText, .returnTabText{
+    position: absolute;
+    height: 145px;
+    width: 200px;
+    font-size: 25px;
+    text-align: center;
+    color: white;
+}
+.addTabText {
+    left: 108px;
+}
+.addTabText , .removeTabText, .issueTabText {
+    top: 170px;
+}
+.removeTabText {
+    
+    left: 380px;
+}
+.returnTabText {
+    
+    left: 380px;
+    top: 370px;
+}
+.issueTabText {
+   
+    left: 653px;
+}
+.removebookTab {
+    
+    left: 380px;
+    top: 115px;
+}
+.issuebookTab {
+   
+    left: 653px;
+    top: 115px;
+}
+.returnbookTab {
+    
+    left: 380px;
+    top: 315px;
+}
+.dashContainer a {
+    color: white;
+    text-decoration: none;
+}
+.dashContainer a:hover {
+    color: goldenrod;
+    font-weight: bold;
+}
+.loginForm {
+   
+    height: 400px;
+    width: 400px;
+    border: 4px solid black;
+    list-style: none;
+    padding: 0;
+    margin-bottom: 30px;
+}
+.loginForm input {
+    display: block;
+}
+.tbox {
+    height: 34px;
+    width: 195px;
+    margin-bottom: 31px;
+}
+.loginInst {
+    margin-bottom: 60px;
+    margin-top: 60px;
+}
+.signBtn {
+    margin-top: 50px;
+    text-align: center;
+    vertical-align: middle;
+    display: inline-block;
+    font-weight: 400;
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+    width: 120px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#footDiv {
+    text-align: center;
+    border-top: 2px solid rgb(67, 169, 177);
+    margin-bottom: 0px;
+}
+.addbook{
+    color: black;
+    width: 350px;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px 20px;
+    box-shadow: 5px 5px 5px black;
+    background-color: aquamarine;
+}
+.returnBtn {
+    color: white;
+    text-decoration: none;
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: black;
+}
+.returnBtn:hover {
+    color: goldenrod;
+    font-weight: bold;
+}

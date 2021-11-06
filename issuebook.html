@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LMS</title>
+</head>
+<body>
+    <div id="headDiv">
+        <span>YOUR LIBRARY</span>
+        <a class= "btn2" href="login.html">Logout</a>
+        <a class= "hmbtn" href="Index.html">Home</a>
+    </div>
+
+    <div id="dashboardDiv">
+        <center>
+            <div class="addbook">
+                <form class="issueBook" name="addbookform" method="post" onsubmit="return issueBook()">
+                    <h3>Issue Book</h3>
+                    <input type="text"  name="bookname" placeholder="Enter Book Id">
+                    <br>
+                    <input type="text" name="student_name" placeholder="Enter Student Name">
+                    <br>
+                    <input type="text" name="student_email" placeholder="Enter Student Email">
+                    <br>
+                    <label for="start_date">Start Date:</label>
+                    <br>
+                    <input type="date" name="start_date" placeholder="Enter Current Date">
+                    <br>  
+                    <label for="start_date">Expiry Date:</label>
+                    <br>
+                    <input type="date" name="end_date" placeholder="Enter EXpire Date">
+                    <br>
+                    <input type="submit"value="Issue">
+                </form>
+            </div>
+            <a href="admin_Dashboard.html" class="returnBtn">Return to Dashboard</a>
+        </center>
+    </div>
+
+    <div id="footDiv">
+        allCopyReserved©2021
+    </div>
+    <script type="text/javascript">
+        let dummy=[
+            {
+                id:1,
+                name:'Math',
+                author:'AB',
+                status:true
+            },
+            {
+                id:2,
+                name:'Eng',
+                author:'BC',
+                status:true
+            },
+            {
+                id:3,
+                name:'Hindi',
+                author:'CD',
+                status:true
+            },
+            {
+                id:4,
+                name:'Odia',
+                author:'DE',
+                status:true
+            },
+        ]
+        let books=dummy;
+
+        const issueBook=()=>{
+            let id=document.addbookform.bookname.value;
+            let student_name=document.addbookform.student_name.value;
+            let email=document.addbookform.student_email.value;
+            let start_date=document.addbookform.start_date.value;
+            let end_date=document.addbookform.end_date.value;
+
+
+            let issued=false;
+
+            books.map((book,index)=>{
+                if(book.id == id && book.status){
+                    book.status=false;
+                    alert("Book issued successfully.");
+                    issued=true;
+                    return false;
+                }
+            });
+            if(!issued)
+            alert('Book is not available');
+            return false;
+        }
+    </script>
+    <link rel="stylesheet" href="Index.css">
+</body>
+</html>

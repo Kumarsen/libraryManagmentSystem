@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LMS</title>
+</head>
+<body>
+    <div id="headDiv">
+        <span>YOUR LIBRARY</span>
+        <a class= "btn2" href="login.html">Logout</a>
+        <a class= "hmbtn" href="Index.html">Home</a>
+    </div>
+
+    <div id="dashboardDiv">
+        <center>
+            <div class="loginForm">
+                <form class="issueBook" name="returnform" method="post" onsubmit="return returnBook()">
+                    <h3 style="color: black; background-color: burlywood;">Return Book</h3>
+                
+                    <input type="text" name="student_name" placeholder="Enter Student UserName">
+                    <br>
+                    <input type="text"  name="bookname" placeholder="Enter Book name">
+                    <br>
+                    <input type="submit" value="Return">
+                </form>
+            </div>
+            <a href="admin_Dashboard.html" class="returnBtn">Return to Dashboard</a>
+         </center>
+    </div>
+    <div id="footDiv">
+        allCopyReserved©2021
+    </div>
+    <script type="text/javascript">
+       var book=[
+            {
+                id:1,
+                name:'Math',
+                author:'AB',
+                status:true
+            },
+            {
+                id:2,
+                name:'Eng',
+                author:'BC',
+                status:true
+            },
+            {
+                id:3,
+                name:'Hindi',
+                author:'CD',
+                status:true
+            },
+            {
+                id:4,
+                name:'Odia',
+                author:'DE',
+                status:true
+            },
+        ]
+      const returnBook=()=>{
+
+        let username=document.returnform.student_name.value;
+        let bookname=document.returnform.bookname.value;
+
+       if(username.length < 1 || bookname.length < 1)
+       alert("Field should not be empty")
+
+       book.pop({
+           name:bookname,
+           status:true
+       });
+       console.log(book)
+          alert("Returned Succedd.");
+          return false;
+      }
+    </script>
+    <link rel="stylesheet" href="Index.css">
+</body>
+</html>
